@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothes' City - Contact</title>
+    <!-- Lien Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Lien vers les icônes Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Lien vers Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body id="contact">
+    <header>
+        <nav>
+            <div>
+                <img src="images/OG_Logo.png" alt="Logo de Clothes' City">
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="products.html">Produits</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li>
+                    <button id="theme-toggle" aria-label="Activer le mode sombre">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <h1>Contactez-nous</h1>
+        <p>Nous sommes là pour répondre à toutes vos questions et vous aider avec vos commandes.</p><br>
+        <p>Ta ville, ton style, ta vibe</p>
+        <a href="index.html">Retour à l'accueil</a>
+    </section>
+    <section id="contact">
+        <h1>Nous Contacter</h1>
+        <p>Pour toute question ou commande, n'hésitez pas à nous contacter :</p>
+        <ul>
+            <li>Email: clothescity@gmail.com</li>
+            <li>Téléphone: +221 78 447 80 15/ +242 06 414 01 69</li>
+        </ul>
+    </section>
+    <section id="formulaire">
+        <h1>Formulaire de Contact</h1>
+
+        <p>Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.</p>
+
+        <form id="contact-form">
+
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+
+            <label for="subject">Sujet :</label>
+            <select id="subject" name="subject" required>
+                <option value="">Sélectionnez un sujet</option>
+                <option value="commande">Commande</option>
+                <option value="produit">Produit</option>
+                <option value="autre">Autre</option>
+            </select>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" placeholder="Votre message" rows="6" required></textarea>
+
+            <button type="submit">Envoyer</button>
+
+            <p id="form-status"></p>
+
+        </form>
+    </section>
+
+    <section id="map">
+        <h1>Notre Localisation</h1>
+        <p>Venez nous rendre visite à notre boutique :</p>
+        <p>8890 Rue SC 17, Dakar, Sénégal</p>
+        <div id="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d964.6954448465397!2d-17.467871930515987!3d14.724925996170702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172b27c203d1b%3A0xdafc9289a7f6ce5c!2s8890%20Rue%20SC%2017%2C%20Dakar!5e0!3m2!1sfr!2ssn!4v1775469042877!5m2!1sfr!2ssn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-links">
+            <a href="#hero">Accueil</a>
+            <a href="#products">Produits</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">À propos</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+        </div>
+        <div class="footer-contact">
+            <p>Email: clothescity@gmail.com</p>
+            <p>Téléphone: +221 78 447 80 15/ +242 06 414 01 69</p>
+        </div>
+        <p>&copy; 2024 Clothes' City. Tous droits réservés.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
