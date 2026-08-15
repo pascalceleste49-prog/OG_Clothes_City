@@ -1,84 +1,545 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Clothes' City - Produits</title>
-    <!-- Lien Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Lien vers le fichier CSS -->
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Ton CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Lien vers les icônes Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <!-- Lien vers Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body id="products">
+
+
+<body id="products-page">
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
     <header>
+
         <nav>
+
             <div>
-                <img src="images/OG_Logo.png" alt="Logo de Clothes' City">
+                <a href="index.html">
+                    <img
+                        src="images/OG_Logo.png"
+                        alt="Logo de Clothes' City"
+                    >
+                </a>
             </div>
+
+
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="products.html">Produits</a></li>
-                <li><a href="contacts.html">Contact</a></li>
-                <li><a href="about.html">À propos</a></li>
+
                 <li>
-                    <button id="theme-toggle" aria-label="Activer le mode sombre">
+                    <a href="index.html">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="products.html">
+                        Produits
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contacts.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        À propos
+                    </a>
+                </li>
+
+                <li>
+
+                    <button
+                        id="theme-toggle"
+                        aria-label="Activer le mode sombre"
+                    >
                         <i class="bi bi-moon-fill"></i>
                     </button>
+
                 </li>
+
             </ul>
+
         </nav>
+
     </header>
-    <section id="hero">
-        <h1>Nos Produits</h1>
-        <p>Découvrez notre collection de vêtements streetwear pour toutes les occasions.</p><br>
-        <p>Ta ville, ton style, ta vibe</p>
-        <a href="index.html">Retour à l'accueil</a>
+
+
+
+    <!-- =====================================================
+         HERO PRODUITS
+    ====================================================== -->
+
+    <section id="products-hero">
+
+        <div class="products-hero-content">
+
+            <span class="eyebrow">
+                CLOTHES' CITY
+            </span>
+
+            <h1>
+                NOS<br>
+                PRODUITS
+            </h1>
+
+            <p>
+                Découvrez notre collection streetwear pensée
+                pour celles et ceux qui veulent affirmer leur style.
+            </p>
+
+            <a
+                href="#products-list"
+                class="btn-light"
+            >
+                Découvrir la collection
+            </a>
+
+        </div>
+
     </section>
-    <section id="products">
-        <h1>Nos Produits</h1>
-        <div class="product">
-            <img src="images/tshirt1.png" alt="T-Shirt 1">
-            <h2>T-Shirt 1</h2>
-            <p>Description du T-Shirt 1.</p>
-            <p>Prix: 20€</p>
+
+
+
+    <!-- =====================================================
+         PRODUITS
+    ====================================================== -->
+
+    <section id="products-list">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                COLLECTION
+            </span>
+
+            <h2>
+                Nos essentiels
+            </h2>
+
+            <p>
+                Des pièces simples, modernes et inspirées
+                de la culture urbaine.
+            </p>
+
         </div>
-        <div class="product">
-            <img src="images/tshirt2.png" alt="T-Shirt 2">
-            <h2>T-Shirt 2</h2>
-            <p>Description du T-Shirt 2.</p>
-            <p>Prix: 25€</p>
+
+
+        <div class="products-grid">
+
+
+            <!-- =================================================
+                 PRODUIT 1
+            ================================================== -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <span class="product-badge">
+                        STANDARD
+                    </span>
+
+                    <img
+                        src="images/Share_connection.jpeg"
+                        alt="T-Shirt Clothes' City modèle 1"
+                    >
+
+                    <div class="product-overlay">
+
+                        <a
+                            href="https://wa.me/242069387865?text=Bonjour%20Clothes%27%20City,%20je%20souhaite%20commander%20le%20T-shirt%20Share20Connection%20with%20the%20city"
+                            class="quick-view"
+                        >
+                            Commander
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        T-SHIRT
+                    </span>
+
+                    <h3>
+                        Share connection with the city
+                    </h3>
+
+                    <p>
+                        Un T-shirt streetwear confortable
+                        avec une identité urbaine forte.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            6.000F CFA
+                        </strong>
+
+                        <a
+                            href="https://wa.me/242069387865?text=Bonjour%20Clothes%27%20City,%20je%20souhaite%20commander%20le%20T-shirt%20Share20Connection%20with%20the%20city"
+                            class="product-button"
+                            aria-label="Commander le T-Shirt City"
+                        >
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUIT 2
+            ================================================== -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <span class="product-badge">
+                        NOUVEAU
+                    </span>
+
+                    <img
+                        src="images/straight.jpeg"
+                        alt="T-Shirt Clothes' City modèle 2"
+                    >
+
+                    <div class="product-overlay">
+
+                        <a
+                            href="https://wa.me/242069387865?text=Bonjour%20Clothes%27%20City,%20je%20souhaite%20commander%20le%20T-shirt%20Straight%20for%20the%20city"
+                            class="quick-view"
+                        >
+                            Commander
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        T-SHIRT
+                    </span>
+
+                    <h3>
+                        Straight for the city
+                    </h3>
+
+                    <p>
+                        Une pièce minimaliste conçue pour
+                        compléter facilement tous tes looks.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            8.000F CFA
+                        </strong>
+
+                        <a
+                            href="https://wa.me/242069387865?text=Bonjour%20Clothes%27%20City,%20je%20souhaite%20commander%20le%20T-shirt%20Straight%20for%20the%20city"
+                            class="product-button"
+                            aria-label="Commander le Straight for the city"
+                        >
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PRODUIT 3
+            ================================================== -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <span class="product-badge">
+                        STANDARD
+                    </span>
+
+                    <img
+                        src="images/WhatsApp Image 2026-08-11 at 7.12.56 AM.jpeg"
+                        alt="T-Shirt Clothes' City modèle 3"
+                    >
+
+                    <div class="product-overlay">
+
+                        <a
+                            href="https://wa.me/242069387865?text=Bonjour%20Clothes%27%20City,%20je%20souhaite%20commander%20le%20T-shirt%20Share"
+                            class="quick-view"
+                        >
+                            Commander
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        T-SHIRT
+                    </span>
+
+                    <h3>
+                        Be connected with the city
+                    </h3>
+
+                    <p>
+                        Notre modèle signature pour un look
+                        streetwear affirmé.
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            6.000F CFA
+                        </strong>
+
+                        <a
+                            href="https://wa.me/242069387865?text=Bonjour%20Clothes%27%20City,%20je%20souhaite%20commander%20le%20T-shirt%20Be%20connected%20with%20the%20city"
+                            class="product-button"
+                            aria-label="Commander le Be connected with the city"
+                        >
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
         </div>
-        <div class="product">
-            <img src="images/tshirt3.png" alt="T-Shirt 3">
-            <h2>T-Shirt 3</h2>
-            <p>Description du T-Shirt 3.</p>
-            <p>Prix: 30€</p>
-        </div>
-        <!-- Ajoutez d'autres produits ici -->
+
     </section>
+
+
+
+    <!-- =====================================================
+         BANNER COLLECTION
+    ====================================================== -->
+
+    <section id="collection-banner">
+
+        <div>
+
+            <span>
+                CLOTHES' CITY
+            </span>
+
+            <h2>
+                TA VILLE.<br>
+                TON STYLE.
+            </h2>
+
+            <p>
+                Découvre notre univers streetwear et affirme
+                ton identité à travers chaque pièce.
+            </p>
+
+            <a
+                href="contacts.html"
+                class="btn-light"
+            >
+                Nous contacter
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer>
-        <div class="footer-links">
-            <a href="index.html">Accueil</a>
-            <a href="products.html">Produits</a>
-            <a href="contacts.html">Contact</a>
-            <a href="about.html">À propos</a>
+
+        <div class="footer-content">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <img
+                    src="images/OG_Logo.png"
+                    alt="Logo Clothes' City"
+                >
+
+                <p>
+                    Clothes' City est une marque streetwear
+                    inspirée par la ville, la culture et
+                    l'expression personnelle.
+                </p>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <div>
+
+                <h4>
+                    Navigation
+                </h4>
+
+                <div class="footer-links">
+
+                    <a href="index.html">
+                        Accueil
+                    </a>
+
+                    <a href="products.html">
+                        Produits
+                    </a>
+
+                    <a href="contacts.html">
+                        Contact
+                    </a>
+
+                    <a href="about.html">
+                        À propos
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-contact">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <p>
+                    <i class="bi bi-envelope"></i>
+                    clothescity@gmail.com
+                </p>
+
+                <p>
+                    <i class="bi bi-telephone"></i>
+                    +221 78 447 80 15
+                </p>
+
+                <p>
+                    <i class="bi bi-telephone"></i>
+                    +242 06 414 01 69
+                </p>
+
+            </div>
+
+
+            <!-- RÉSEAUX -->
+
+            <div class="footer-social">
+
+                <h4>
+                    Suivez-nous
+                </h4>
+
+                <div>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="footer-social">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-twitter"></i></a>
-        </div>
-        <div class="footer-contact">
-            <p>Email: clothescity@gmail.com</p>
-            <p>Téléphone: +221 78 447 80 15/ +242 06 414 01 69</p>
-        </div>
-        <p>&copy; 2024 Clothes' City. Tous droits réservés.</p>
+
+
+        <p class="text-center mt-5 mb-0">
+            &copy; 2026 Clothes' City.
+            Tous droits réservés.
+        </p>
+
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Ton JavaScript -->
+
     <script src="js/main.js"></script>
+
 </body>
+
 </html>

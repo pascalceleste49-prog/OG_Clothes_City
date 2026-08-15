@@ -1677,6 +1677,61 @@ footer {
 /* =========================================================
    FORMULAIRE
 ========================================================= */
+form {
+    width: 500px;
+    padding: 20px;
+    margin-left: 25em;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: var(--purple-light);
+}
+form div{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+form button {
+    width: 7em;
+    padding: 20px;
+    background-color: var(--purple);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 5em;
+}
+form button:hover {
+    background-color: #5b3b8f;
+    transform: translateY(-2px);
+}
+form div, form button {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+form div input, form div textarea, form div select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+}
+form div input:focus, form div textarea:focus, form div select:focus {
+    border-color: #5b3b8f;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(91,59,143,0.08);
+}
+
 
 .contact-form-container {
     background: white;
@@ -2637,17 +2692,115 @@ nav,
 
     transform: rotate(15deg);
 }
+/* =========================================================
+   DARK MODE — CLOTHES' CITY
+   VERSION CORRIGÉE
+========================================================= */
 
 
 /* =========================================================
-   DARK MODE GLOBAL
+   VARIABLES DARK MODE
+========================================================= */
+
+:root {
+    --dark-bg: #0b0b0d;
+    --dark-surface: #141416;
+    --dark-surface-2: #1b1b1f;
+
+    --dark-text: #f5f5f5;
+    --dark-text-secondary: #a5a5aa;
+
+    --dark-border: #2b2b30;
+
+    --dark-purple: #9b70d0;
+    --dark-purple-dark: #5b3b8f;
+}
+
+
+/* =========================================================
+   TRANSITIONS
+========================================================= */
+
+body,
+header,
+nav,
+section,
+main,
+footer,
+article,
+div,
+.product-card,
+.value-card,
+.temoignage,
+.reassurance,
+.contact-form-container,
+.form-group input,
+.form-group select,
+.form-group textarea {
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   BOUTON DARK MODE
+========================================================= */
+
+#theme-toggle {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 20px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 50%;
+
+    background: transparent;
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: var(--dark-purple);
+    border-color: var(--dark-purple);
+
+    transform: rotate(15deg);
+}
+
+
+/* =========================================================
+   BODY — DARK MODE
 ========================================================= */
 
 body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
 
-    background: var(--bg-dark);
 
-    color: var(--text-dark);
+/* =========================================================
+   IMPORTANT :
+   TES PAGES UTILISENT #products-page, #contact-page,
+   #about-page DIRECTEMENT SUR LE BODY.
+========================================================= */
+
+body.dark-mode#products-page,
+body.dark-mode#contact-page,
+body.dark-mode#about-page {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
 }
 
 
@@ -2656,193 +2809,308 @@ body.dark-mode {
 ========================================================= */
 
 body.dark-mode header {
-
-    background: #080809;
+    background: #050506;
+    border-bottom-color: #222228;
 }
 
 body.dark-mode nav {
-
-    background: #080809;
+    background: transparent;
 }
 
-body.dark-mode nav a {
-
+body.dark-mode nav ul li a {
     color: #eeeeee;
 }
 
-body.dark-mode nav a:hover,
-body.dark-mode nav a.active {
+body.dark-mode nav ul li a:hover {
+    color: var(--dark-purple);
+}
 
-    color: var(--purple);
+body.dark-mode nav ul li a::after {
+    background: var(--dark-purple);
 }
 
 
 /* =========================================================
-   BOUTON THEME EN DARK MODE
+   BOUTON THEME
 ========================================================= */
 
 body.dark-mode #theme-toggle {
-
-    border-color: #44444b;
-
-    color: #f5f5f5;
-}
-
-body.dark-mode #theme-toggle:hover {
-
-    background: var(--purple);
-
-    border-color: var(--purple);
-}
-
-
-/* =========================================================
-   SECTIONS
-========================================================= */
-
-body.dark-mode #about-intro,
-body.dark-mode #contact-content,
-body.dark-mode #values,
-body.dark-mode #map-section {
-
-    color: var(--text-dark);
-}
-
-
-/* =========================================================
-   TEXTES SECONDAIRES
-========================================================= */
-
-body.dark-mode p {
-
-    color: var(--text-secondary-dark);
-}
-
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-body.dark-mode #about-page {
-
-    background: var(--bg-dark);
-}
-
-body.dark-mode .about-intro-content h2 {
-
-    color: var(--text-dark);
-}
-
-body.dark-mode .about-intro-content h2 span {
-
-    color: var(--purple);
-}
-
-body.dark-mode .story-content {
-
     background: #111113;
-
-    color: var(--text-dark);
-}
-
-body.dark-mode .story-content p {
-
-    color: #aaaaaf;
-}
-
-body.dark-mode .story-content h2 {
-
+    border-color: #44444b;
     color: #ffffff;
 }
 
-body.dark-mode .mission-content p {
-
-    color: #dddddd;
+body.dark-mode #theme-toggle:hover {
+    background: var(--dark-purple);
+    border-color: var(--dark-purple);
 }
 
 
 /* =========================================================
-   CARTES DES VALEURS
+   TEXTES GENERAUX
 ========================================================= */
 
-body.dark-mode .value-card {
+body.dark-mode p {
+    color: var(--dark-text-secondary);
+}
 
-    background: var(--surface-dark);
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--dark-text);
+}
 
-    border-bottom-color: #333338;
 
-    color: var(--text-dark);
+/* =========================================================
+   PAGE PRODUITS
+========================================================= */
+
+/* Toute la zone principale */
+
+body.dark-mode#products-page {
+    background-color: var(--dark-bg);
+}
+
+
+/* =========================================================
+   COLLECTION
+========================================================= */
+
+body.dark-mode #collection {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+
+/* petit titre COLLECTION */
+
+body.dark-mode #collection .section-heading > span {
+    color: var(--dark-purple);
+}
+
+
+/* NOS ESSENTIELS */
+
+body.dark-mode #collection .section-heading h2 {
+    color: #ffffff;
+}
+
+
+/* description */
+
+body.dark-mode #collection .section-heading p {
+    color: #a5a5aa;
+}
+
+
+/* =========================================================
+   GRILLE PRODUITS
+========================================================= */
+
+body.dark-mode .products-grid {
+    background: transparent;
+}
+
+
+/* =========================================================
+   CARTES PRODUITS
+========================================================= */
+
+body.dark-mode .product-card {
+    background: var(--dark-surface);
+    color: var(--dark-text);
 
     box-shadow: none;
 }
 
-body.dark-mode .value-card:hover {
-
-    border-bottom-color: var(--purple);
+body.dark-mode .product-card:hover {
+    background: var(--dark-surface-2);
 
     box-shadow:
-        0 20px 50px rgba(0,0,0,0.35);
-}
-
-body.dark-mode .value-card h3 {
-
-    color: #ffffff;
-}
-
-body.dark-mode .value-card p {
-
-    color: #99999f;
-}
-
-body.dark-mode .value-number {
-
-    color: #29292f;
+        0 20px 50px rgba(0,0,0,0.45);
 }
 
 
 /* =========================================================
-   CONTACT
+   IMAGE PRODUIT
 ========================================================= */
 
-body.dark-mode #contact-page {
-
-    background: var(--bg-dark);
+body.dark-mode .product-image {
+    background: #202025;
 }
 
-body.dark-mode .contact-info h2 {
 
+/* =========================================================
+   INFORMATIONS PRODUIT
+========================================================= */
+
+body.dark-mode .product-info {
+    background: var(--dark-surface);
+    color: var(--dark-text);
+}
+
+body.dark-mode .product-category {
+    color: #99999f;
+}
+
+body.dark-mode .product-info h3 {
     color: #ffffff;
 }
 
-body.dark-mode .contact-item p {
-
-    color: #eeeeee;
+body.dark-mode .product-info p {
+    color: #99999f;
 }
 
-body.dark-mode .contact-item span {
 
+/* prix */
+
+body.dark-mode .product-bottom strong {
+    color: #ffffff;
+}
+
+
+/* bouton produit */
+
+body.dark-mode .product-button {
+    background: #ffffff;
+    color: #111111;
+}
+
+body.dark-mode .product-button:hover {
+    background: var(--dark-purple);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   BADGE PRODUIT
+========================================================= */
+
+body.dark-mode .product-badge {
+    background: var(--dark-purple);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   QUICK VIEW
+========================================================= */
+
+body.dark-mode .product-overlay {
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,0.9)
+        );
+}
+
+body.dark-mode .quick-view {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+body.dark-mode .quick-view:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================================================
+   COLLECTION BANNER
+========================================================= */
+
+body.dark-mode #collection-banner {
+    background-color: #080809;
+}
+
+body.dark-mode #collection-banner span {
+    color: var(--dark-purple);
+}
+
+body.dark-mode #collection-banner h2 {
+    color: #ffffff;
+}
+
+body.dark-mode #collection-banner p {
+    color: #cccccc;
+}
+
+
+/* bouton clair */
+
+body.dark-mode .btn-light {
+    background: #ffffff;
+    color: #111111;
+}
+
+body.dark-mode .btn-light:hover {
+    background: var(--dark-purple);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   PAGE CONTACT
+========================================================= */
+
+body.dark-mode#contact-page {
+    background-color: var(--dark-bg);
+}
+
+
+/* contenu contact */
+
+body.dark-mode #contact-content {
+    color: var(--dark-text);
+}
+
+body.dark-mode .contact-info h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .contact-intro {
+    color: #99999f;
+}
+
+
+/* éléments contact */
+
+body.dark-mode .contact-item span {
     color: #88888f;
 }
 
-body.dark-mode .contact-social {
+body.dark-mode .contact-item p {
+    color: #eeeeee;
+}
 
-    border-color: var(--border-dark);
+body.dark-mode .contact-icon {
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* réseaux */
+
+body.dark-mode .contact-social {
+    border-color: var(--dark-border);
+}
+
+body.dark-mode .contact-social > span {
+    color: #88888f;
 }
 
 body.dark-mode .contact-social a {
-
     border-color: #3a3a40;
-
     color: #eeeeee;
 }
 
 body.dark-mode .contact-social a:hover {
-
-    background: var(--purple-dark);
-
-    border-color: var(--purple-dark);
-
-    color: white;
+    background: var(--dark-purple);
+    border-color: var(--dark-purple);
+    color: #ffffff;
 }
 
 
@@ -2851,33 +3119,38 @@ body.dark-mode .contact-social a:hover {
 ========================================================= */
 
 body.dark-mode .contact-form-container {
-
-    background: var(--surface-dark);
+    background: var(--dark-surface);
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,0.35);
+        0 20px 60px rgba(0,0,0,0.45);
 }
 
 body.dark-mode .form-header h2 {
-
     color: #ffffff;
 }
 
 body.dark-mode .form-header p {
-
     color: #99999f;
 }
 
-body.dark-mode .form-group label {
+body.dark-mode .form-header > span {
+    color: var(--dark-purple);
+}
 
+
+/* labels */
+
+body.dark-mode .form-group label {
     color: #dddddd;
 }
+
+
+/* champs */
 
 body.dark-mode .form-group input,
 body.dark-mode .form-group select,
 body.dark-mode .form-group textarea {
-
-    background: #1b1b1f;
+    background: var(--dark-surface-2);
 
     border-color: #333338;
 
@@ -2886,51 +3159,242 @@ body.dark-mode .form-group textarea {
 
 body.dark-mode .form-group input::placeholder,
 body.dark-mode .form-group textarea::placeholder {
-
     color: #77777d;
 }
+
+
+/* focus */
 
 body.dark-mode .form-group input:focus,
 body.dark-mode .form-group select:focus,
 body.dark-mode .form-group textarea:focus {
-
-    border-color: var(--purple);
-
     background: #202025;
 
+    border-color: var(--dark-purple);
+
+    color: #ffffff;
+
     box-shadow:
-        0 0 0 3px rgba(155,112,208,0.12);
+        0 0 0 3px rgba(155,112,208,0.15);
+}
+
+
+/* bouton envoyer */
+
+body.dark-mode .contact-submit {
+    background: #ffffff;
+    color: #111111;
+}
+
+body.dark-mode .contact-submit:hover {
+    background: var(--dark-purple);
+    color: #ffffff;
 }
 
 
 /* =========================================================
-   PRODUITS
+   MAP
 ========================================================= */
 
-body.dark-mode #products-page {
-
-    background: var(--bg-dark);
+body.dark-mode #map-section {
+    color: #ffffff;
 }
 
-body.dark-mode .product {
+body.dark-mode .map-heading > span {
+    color: var(--dark-purple);
+}
 
-    background: var(--surface-dark);
+body.dark-mode .map-heading h2 {
+    color: #ffffff;
+}
 
-    color: white;
+body.dark-mode .map-heading p {
+    color: #99999f;
+}
 
-    border-color: var(--border-dark);
+body.dark-mode #map-container {
+    background: #18181b;
+}
+
+
+/* =========================================================
+   PAGE À PROPOS
+========================================================= */
+
+body.dark-mode#about-page {
+    background-color: var(--dark-bg);
+}
+
+
+/* INTRO */
+
+body.dark-mode #about-intro {
+    color: #ffffff;
+}
+
+body.dark-mode .about-intro-content h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .about-intro-content h2 span {
+    color: var(--dark-purple);
+}
+
+body.dark-mode .about-intro-content p {
+    color: #99999f;
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+body.dark-mode .story-content {
+    background: #111113;
+    color: #ffffff;
+}
+
+body.dark-mode .story-content h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .story-content h2 span {
+    color: var(--dark-purple);
+}
+
+body.dark-mode .story-content p {
+    color: #aaaaaf;
+}
+
+
+/* =========================================================
+   MISSION
+========================================================= */
+
+body.dark-mode #mission {
+    color: #ffffff;
+}
+
+body.dark-mode .mission-content h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .mission-content h2 span {
+    color: #d8c2f0;
+}
+
+body.dark-mode .mission-content p {
+    color: #dddddd;
+}
+
+
+/* =========================================================
+   VALEURS
+========================================================= */
+
+body.dark-mode #values {
+    color: #ffffff;
+}
+
+body.dark-mode .value-card {
+    background: var(--dark-surface);
+
+    color: #ffffff;
+
+    border-bottom-color: #333338;
 
     box-shadow: none;
 }
 
-body.dark-mode .product h2 {
+body.dark-mode .value-card:hover {
+    background: var(--dark-surface-2);
 
+    border-bottom-color: var(--dark-purple);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .value-card h3 {
     color: #ffffff;
 }
 
-body.dark-mode .product p {
-
+body.dark-mode .value-card p {
     color: #99999f;
+}
+
+body.dark-mode .value-number {
+    color: #29292f;
+}
+
+body.dark-mode .value-card > i {
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================================================
+   TEMOIGNAGES
+========================================================= */
+
+body.dark-mode #temoignages {
+    background: var(--dark-bg);
+    color: #ffffff;
+}
+
+body.dark-mode #temoignages h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .temoignage {
+    background: var(--dark-surface);
+
+    color: #ffffff;
+
+    border-left-color: var(--dark-purple);
+
+    box-shadow: none;
+}
+
+body.dark-mode .temoignage:hover {
+    background: var(--dark-surface-2);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .temoignage p {
+    color: #dddddd;
+}
+
+body.dark-mode .temoignage span {
+    color: #eeeeee;
+}
+
+body.dark-mode .temoignage i {
+    color: var(--dark-purple);
+}
+
+
+/* =========================================================
+   REASSURANCES
+========================================================= */
+
+body.dark-mode #reassurances {
+    background: var(--dark-bg);
+}
+
+body.dark-mode .reassurance {
+    background: var(--dark-surface);
+    color: #ffffff;
+}
+
+body.dark-mode .reassurance:hover {
+    background: var(--dark-purple-dark);
+}
+
+body.dark-mode .reassurance p {
+    color: #dddddd;
 }
 
 
@@ -2939,72 +3403,24 @@ body.dark-mode .product p {
 ========================================================= */
 
 body.dark-mode #lookbook {
-
-    background: #080809;
+    background: var(--dark-bg);
 }
 
 
 /* =========================================================
-   TÉMOIGNAGES
+   MANIFESTE
 ========================================================= */
 
-body.dark-mode #temoignages {
-
-    background: #0f0f11;
-
-    color: white;
+body.dark-mode #manifesto {
+    color: #ffffff;
 }
 
-body.dark-mode .temoignage {
-
-    background: var(--surface-dark);
-
-    border-color: var(--border-dark);
+body.dark-mode #manifesto h2 {
+    color: #ffffff;
 }
 
-body.dark-mode .temoignage p {
-
-    color: #dddddd;
-}
-
-
-/* =========================================================
-   RÉASSURANCES
-========================================================= */
-
-body.dark-mode #reassurances {
-
-    background: #141416;
-}
-
-body.dark-mode .reassurance {
-
-    color: white;
-}
-
-body.dark-mode .reassurance p {
-
+body.dark-mode #manifesto p {
     color: #aaaaaf;
-}
-
-
-/* =========================================================
-   MAP
-========================================================= */
-
-body.dark-mode .map-heading h2 {
-
-    color: white;
-}
-
-body.dark-mode .map-heading p {
-
-    color: #99999f;
-}
-
-body.dark-mode #map-container {
-
-    background: #18181b;
 }
 
 
@@ -3013,45 +3429,46 @@ body.dark-mode #map-container {
 ========================================================= */
 
 body.dark-mode footer {
-
     background: #050506;
+    color: #ffffff;
+}
 
-    color: white;
+body.dark-mode footer h4 {
+    color: #ffffff;
 }
 
 body.dark-mode footer p {
-
     color: #88888f;
 }
 
 body.dark-mode footer a {
-
     color: #cccccc;
 }
 
 body.dark-mode footer a:hover {
-
-    color: var(--purple);
+    color: var(--dark-purple);
 }
 
 body.dark-mode .footer-bottom {
-
     border-color: #242429;
+}
+
+body.dark-mode .footer-bottom p {
+    color: #66666d;
 }
 
 
 /* =========================================================
-   MOBILE
+   RESPONSIVE
 ========================================================= */
 
 @media (max-width: 768px) {
 
     #theme-toggle {
-
-        margin-left: 10px;
-
         width: 38px;
         height: 38px;
+
+        margin-left: 10px;
 
         font-size: 15px;
     }

@@ -1,123 +1,317 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothes' City</title>
-    <!-- Lien Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Lien vers le fichier CSS -->
+
+    <title>Clothes' City - Accueil</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS personnalisé -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Lien vers les icônes Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <!-- Lien vers Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet"
+    >
 </head>
-<body>
+
+<body id="accueil">
+
+    <!-- ==================== HEADER ==================== -->
     <header>
         <nav>
+
+            <!-- Logo -->
             <div>
-                <img src="images/OG_Logo.png" alt="Logo de Clothes' City">
+                <a href="index.html">
+                    <img
+                        src="images/OG_Logo.png"
+                        alt="Logo de Clothes' City"
+                    >
+                </a>
             </div>
+
+            <!-- Navigation -->
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="products.html">Produits</a></li>
-                <li><a href="contacts.html">Contact</a></li>
-                <li><a href="about.html">À propos</a></li>
                 <li>
-                    <button id="theme-toggle" aria-label="Activer le mode sombre">
+                    <a href="index.html">Accueil</a>
+                </li>
+
+                <li>
+                    <a href="products.html">Produits</a>
+                </li>
+
+                <li>
+                    <a href="contacts.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="about.html">À propos</a>
+                </li>
+
+                <!-- Dark mode -->
+                <li>
+                    <button
+                        id="theme-toggle"
+                        type="button"
+                        aria-label="Activer le mode sombre"
+                    >
                         <i class="bi bi-moon-fill"></i>
                     </button>
                 </li>
             </ul>
+
         </nav>
     </header>
+
+
+    <!-- ==================== HERO ==================== -->
     <section id="hero">
+
         <h1>Bienvenue à Clothes' City</h1>
-        <p>Découvrez notre collection de vêtements streetwear pour toutes les occasions.</p><br>
-        <p>Ta ville, ton style, ta vibe</p>
-        <a href="products.html">Voir nos produits</a>
+
+        <p>
+            Découvrez notre collection de vêtements streetwear
+            pour toutes les occasions.
+        </p>
+
+        <p>
+            Ta ville, ton style, ta vibe
+        </p>
+
+        <a href="products.html">
+            Voir nos produits
+        </a>
+
     </section>
+
+
+    <!-- ==================== LOOKBOOK ==================== -->
     <section id="lookbook">
+
+        <h2>Notre Lookbook</h2>
+
         <div id="tshirt1_container">
             <div id="tshirt1">
-                <img src="images/lookbook2.png" alt="Avant T-Shirt 1">
+                <img
+                    src="images/lookbook2.png"
+                    alt="T-shirt Clothes' City modèle 1"
+                >
             </div>
         </div>
+
         <div id="tshirt2_container">
             <div id="tshirt2">
-                <img src="images/ChatGPT Image Aug 13, 2026, 11_15_47 PM.png" alt="Avant T-Shirt 2">
+                <img
+                    src="images/ChatGPT Image Aug 13, 2026, 11_15_47 PM.png"
+                    alt="T-shirt Clothes' City modèle 2"
+                >
             </div>
         </div>
+
         <div id="tshirt3_container">
             <div id="tshirt3">
-                <img src="images/lookbook3.png" alt="Avant T-Shirt 3">
+                <img
+                    src="images/lookbook3.png"
+                    alt="T-shirt Clothes' City modèle 3"
+                >
             </div>
         </div>
+
     </section>
+
+
+    <!-- ==================== TÉMOIGNAGES ==================== -->
     <section id="temoignages">
+
         <h2>Témoignages</h2>
+
         <div class="temoignage">
-            <p>"J'adore les vêtements de Clothes' City ! La qualité est excellente et le style est unique."</p>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-half"></i>
+
+            <p>
+                "J'adore les vêtements de Clothes' City !
+                La qualité est excellente et le style est unique."
+            </p>
+
+            <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+            </div>
+
             <span>- Alex</span>
+
         </div>
+
+
         <div class="temoignage">
-            <p>"Le service client est incroyable. Ils ont répondu à toutes mes questions rapidement."</p>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
+
+            <p>
+                "Le service client est incroyable.
+                Ils ont répondu à toutes mes questions rapidement."
+            </p>
+
+            <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+
             <span>- Marie</span>
+
         </div>
+
+
         <div class="temoignage">
-            <p>"Les vêtements sont confortables et stylés. Je recommande vivement Clothes' City !"</p>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
+
+            <p>
+                "Les vêtements sont confortables et stylés.
+                Je recommande vivement Clothes' City !"
+            </p>
+
+            <div class="stars">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+
             <span>- Thomas</span>
+
         </div>
+
     </section>
+
+
+    <!-- ==================== RÉASSURANCES ==================== -->
     <section id="reassurances">
+
         <div class="reassurance">
+
             <i class="bi bi-truck"></i>
-            <p>Livraison rapide et gratuite</p>
+
+            <p>
+                Livraison rapide et gratuite
+            </p>
+
         </div>
+
+
         <div class="reassurance">
+
             <i class="bi bi-arrow-counterclockwise"></i>
-            <p>Retours faciles sous 30 jours</p>
+
+            <p>
+                Retours faciles sous 30 jours
+            </p>
+
         </div>
+
+
         <div class="reassurance">
+
             <i class="bi bi-shield-check"></i>
-            <p>Paiement sécurisé</p>
+
+            <p>
+                Paiement sécurisé
+            </p>
+
         </div>
+
     </section>
+
+
+    <!-- ==================== FOOTER ==================== -->
     <footer>
+
         <div class="footer-links">
-            <a href="#hero">Accueil</a>
-            <a href="#products">Produits</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">À propos</a>
+
+            <a href="index.html">
+                Accueil
+            </a>
+
+            <a href="products.html">
+                Produits
+            </a>
+
+            <a href="contacts.html">
+                Contact
+            </a>
+
+            <a href="about.html">
+                À propos
+            </a>
+
         </div>
+
+
         <div class="footer-social">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-twitter"></i></a>
+
+            <a href="#" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="#" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Twitter">
+                <i class="bi bi-twitter"></i>
+            </a>
+
         </div>
+
+
         <div class="footer-contact">
-            <p>Email: clothescity@gmail.com</p>
-            <p>Téléphone: +221 78 447 80 15/ +242 06 414 01 69</p>
+
+            <p>
+                Email : clothescity@gmail.com
+            </p>
+
+            <p>
+                Téléphone :
+                +221 78 447 80 15 /
+                +242 06 414 01 69
+            </p>
+
         </div>
-        <p>&copy; 2024 Clothes' City. Tous droits réservés.</p>
+
+
+        <p>
+            &copy; 2024 Clothes' City.
+            Tous droits réservés.
+        </p>
+
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- JavaScript du projet -->
     <script src="js/main.js"></script>
+
 </body>
+
 </html>
